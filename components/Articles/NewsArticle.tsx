@@ -1,7 +1,7 @@
 import { CardHeader, CardContent, Typography, Box } from "@mui/material";
 import Card from "@mui/material/Card";
 import { ReactElement } from "react";
-import { Article } from "../../../shared/types/article";
+import { Article } from "../../shared/types/article";
 
 interface NewsArticleProps {
   article: Article;

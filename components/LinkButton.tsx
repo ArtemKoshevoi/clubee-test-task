@@ -10,7 +10,7 @@ interface LinkButtonProps {
 const LinkButton = ({ href, buttonTitle }: LinkButtonProps) => {
   return (
     <Box sx={{ textAlign: "center" }}>
-      <Link href={href}>
+      <Link href={href} passHref={true}>
         <Button variant="contained">{buttonTitle}</Button>
       </Link>
     </Box>

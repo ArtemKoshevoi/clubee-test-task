@@ -4,8 +4,8 @@ import TextField from "@mui/material/TextField";
 import { useRouter } from "next/router";
 import React from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import ErrorMessage from "../ErrorMessage";
-import LinkButton from "../LinkButton";
+import ErrorMessage from "./ErrorMessage";
+import LinkButton from "./LinkButton";
 
 interface FormInputs {
   title: string;
