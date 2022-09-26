@@ -13,6 +13,8 @@ export default function handler(
     const newArticle = { id: articles.length + 1, ...article };
 
     articles.push(newArticle);
+    // articles.sort((a, b) => b.id - a.id);
+
     res.status(201).json(newArticle);
   }
 }

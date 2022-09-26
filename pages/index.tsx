@@ -17,7 +17,7 @@ const Home: NextPage = () => {
   return (
     <Container maxWidth="lg">
       <Header />
-      <LinkButton />
+      <LinkButton href="/new-article" buttonTitle="New Article" />
       <Articles />
     </Container>
   );

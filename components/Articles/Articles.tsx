@@ -10,7 +10,14 @@ const Articles = () => {
     const fetchArticles = async () => {
       const response = await fetch("/api/articles");
       const data = await response.json();
-      setArticles(data);
+
+      if (data) {
+        const lastArticles = data
+          .sort((a: Article, b: Article) => b.id - a.id)
+          .slice(0, 5);
+
+        setArticles(lastArticles);
+      }
     };
 
     fetchArticles();
@@ -22,6 +29,7 @@ const Articles = () => {
         display: "flex",
         alignItems: "center",
         flexDirection: "column",
+        marginTop: "20px",
       }}
     >
       {articles?.map((article) => {
