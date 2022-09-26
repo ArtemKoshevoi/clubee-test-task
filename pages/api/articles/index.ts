@@ -1,13 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { articles } from "../../../data/articles";
-
-export type Article = {
-  id: number;
-  title: string;
-  body: string;
-  email: string;
-  publicationDate: string;
-};
+import { Article } from "../../../shared/types/article";
 
 export default function handler(
   req: NextApiRequest,
