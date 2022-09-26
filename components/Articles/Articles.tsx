@@ -9,12 +9,10 @@ const Articles = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       const response = await fetch("/api/articles");
-      const data = await response.json();
+      const data: Article[] = await response.json();
 
       if (data) {
-        const lastArticles = data
-          .sort((a: Article, b: Article) => b.id - a.id)
-          .slice(0, 5);
+        const lastArticles = data.sort((a, b) => b.id - a.id).slice(0, 5);
 
         setArticles(lastArticles);
       }
